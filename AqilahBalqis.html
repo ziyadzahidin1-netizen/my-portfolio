@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Saya</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Fade-in Animation */
+    .animate-fade-in {
+      animation: fadeIn 1.2s ease-out forwards;
+    }
+    .animate-bounce-slow {
+      animation: bounce 2s infinite;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+  <!-- Navigasi Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">PORTFOLIO</span>
+      <div class="space-x-6 text-sm font-medium text-slate-300">
+        <a href="#landing" class="hover:text-blue-400 transition">Utama</a>
+        <a href="#about" class="hover:text-blue-400 transition">Latar Belakang</a>
+        <a href="#certificates" class="hover:text-blue-400 transition">Sijil</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= SEKSYEN 1: LANDING PAGE ================= -->
+  <section id="landing" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative">
+    <div class="animate-fade-in flex flex-col items-center">
+      <!-- Gambar Passport dengan Efek Hover & Border Glow -->
+      <div class="relative group mb-6">
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+        <img 
+          src="aqish.jpg" 
+          alt="Gambar Passport" 
+          class="relative w-40 h-52 object-cover rounded-lg border-2 border-slate-700 shadow-2xl transition duration-500 transform group-hover:scale-105"
+        />
+      </div>
+
+      <!-- Nama & Deskripsi -->
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-3">
+        Selamat Datang, Saya <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">[Aqish]</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-400 max-w-xl mb-8">
+        Pelajar / Profesional yang berdedikasi dalam meningkatkan kemahiran dan pencapaian akademik.
+      </p>
+
+      <a href="#about" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1">
+        Terokai Latar Belakang <i data-lucide="arrow-down" class="w-4 h-4"></i>
+      </a>
+    </div>
+
+    <!-- Indicator Scroll ke Bawah -->
+    <div class="absolute bottom-10 animate-bounce-slow text-slate-500">
+      <i data-lucide="chevron-down" class="w-6 h-6"></i>
+    </div>
+  </section>
+
+
+  <!-- ================= SEKSYEN 2: LATAR BELAKANG & PENGALAMAN ================= -->
+  <section id="about" class="min-h-screen flex flex-col justify-center px-6 py-20 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-100">Latar Belakang & Pengalaman</h2>
+      <div class="w-16 h-1 bg-blue-500 mx-auto mt-3 rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Pendidikan -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <i data-lucide="graduation-cap" class="w-6 h-6 text-blue-400"></i>
+          <h3 class="text-2xl font-bold text-slate-200">Pendidikan</h3>
+        </div>
+        <div class="border-l-2 border-slate-800 space-y-8 pl-6">
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 bg-blue-500 rounded-full border-4 border-slate-900"></span>
+            <span class="text-sm font-semibold text-blue-400">2021 - 2024</span>
+            <h4 class="text-xl font-bold text-slate-100 mt-1">Ijazah Sarjana Muda</h4>
+            <p class="text-slate-400 font-medium">Universiti Teknologi Malaysia</p>
+            <p class="text-slate-500 text-sm mt-2">Mengambil jurusan Sains Komputer / Teknologi Informasi dengan pencapaian cemerlang.</p>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 bg-blue-500 rounded-full border-4 border-slate-900"></span>
+            <span class="text-sm font-semibold text-blue-400">2019 - 2021</span>
+            <h4 class="text-xl font-bold text-slate-100 mt-1">Diploma / Matrikulasi</h4>
+            <p class="text-slate-400 font-medium">Kolej / Institut Terlibat</p>
+            <p class="text-slate-500 text-sm mt-2">Fokus pada asas sains tulen dan pengaturcaraan awal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pengalaman -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <i data-lucide="briefcase" class="w-6 h-6 text-indigo-400"></i>
+          <h3 class="text-2xl font-bold text-slate-200">Pengalaman Kerja</h3>
+        </div>
+        <div class="border-l-2 border-slate-800 space-y-8 pl-6">
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 bg-indigo-500 rounded-full border-4 border-slate-900"></span>
+            <span class="text-sm font-semibold text-indigo-400">2023 - Sekarang</span>
+            <h4 class="text-xl font-bold text-slate-100 mt-1">Latihan Industri / Pereka Web</h4>
+            <p class="text-slate-400 font-medium">Syarikat ABC Sdn Bhd</p>
+            <p class="text-slate-500 text-sm mt-2">Membantu pembangunan antara muka laman web berasaskan HTML/CSS dan JavaScript.</p>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 bg-indigo-500 rounded-full border-4 border-slate-900"></span>
+            <span class="text-sm font-semibold text-indigo-400">2022</span>
+            <h4 class="text-xl font-bold text-slate-100 mt-1">Pembantu Projek Pembelajaran</h4>
+            <p class="text-slate-400 font-medium">Kelab Komuniti / Universiti</p>
+            <p class="text-slate-500 text-sm mt-2">Menguruskan acara persatuan dan aktiviti pembangunan modal insan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SEKSYEN 3: SIJIL & ANUGERAH ================= -->
+  <section id="certificates" class="min-h-screen flex flex-col justify-center px-6 py-20 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-100">Koleksi Sijil & Pencapaian</h2>
+        <div class="w-16 h-1 bg-blue-500 mt-3 rounded-full"></div>
+      </div>
+      <!-- Butang Tambah Sijil -->
+      <button onclick="toggleModal(true)" class="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-md transition">
+        <i data-lucide="plus-circle" class="w-5 h-5"></i> Tambah Sijil
+      </button>
+    </div>
+
+    <!-- Senarai Senarai Card Sijil -->
+    <div id="certContainer" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Sijil dinamik akan dimasukkan melalui JavaScript -->
+    </div>
+  </section>
+
+
+  <!-- ================= MODAL BORANG TAMBAH SIJIL ================= -->
+  <div id="certModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-md p-6 shadow-2xl relative">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-slate-100">Tambah Sijil Baru</h3>
+        <button onclick="toggleModal(false)" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <form id="certForm" onsubmit="saveCertificate(event)" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Tajuk Sijil / Kursus</label>
+          <input type="text" id="certTitle" required class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-100 focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Penerbit / Institusi</label>
+          <input type="text" id="certIssuer" required class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-100 focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Tarikh Diperoleh</label>
+          <input type="date" id="certDate" required class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-100 focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Muat Naik Gambar Sijil</label>
+          <input type="file" id="certImageFile" accept="image/*" onchange="convertImageToBase64()" class="w-full text-sm text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-slate-800 file:text-blue-400 hover:file:bg-slate-700">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-1">Atau Gunakan URL Gambar</label>
+          <input type="url" id="certImageUrl" placeholder="https://..." class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-100 focus:outline-none focus:border-blue-500">
+        </div>
+
+        <div class="flex justify-end gap-3 mt-6">
+          <button type="button" onclick="toggleModal(false)" class="px-4 py-2 text-slate-400 hover:text-white text-sm font-medium">Batal</button>
+          <button type="submit" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-semibold shadow">Simpan Sijil</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ================= JAVASCRIPT & LOGIK DATA ================= -->
+  <script>
+    // Inisialisasi ikon Lucide
+    lucide.createIcons();
+
+    // Data Sijil Asal (Default)
+    const defaultCertificates = [
+      {
+        id: 1,
+        title: "Sijil Penyertaan Web Development",
+        issuer: "Academy Tech Malaysia",
+        date: "2023-08-15",
+        image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        id: 2,
+        title: "Pencapaian Anugerah Dekan",
+        issuer: "Fakulti Sains Komputer",
+        date: "2022-12-20",
+        image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&auto=format&fit=crop&q=80"
+      }
+    ];
+
+    let certificates = [];
+    let tempBase64Image = "";
+
+    // Ambil data dari LocalStorage semasa halaman dimuatkan
+    window.addEventListener("DOMContentLoaded", () => {
+      const storedCerts = localStorage.getItem("my_certificates");
+      if (storedCerts) {
+        certificates = JSON.parse(storedCerts);
+      } else {
+        certificates = defaultCertificates;
+        localStorage.setItem("my_certificates", JSON.stringify(certificates));
+      }
+      renderCertificates();
+    });
+
+    // Paparkan kad sijil dalam skrin
+    function renderCertificates() {
+      const container = document.getElementById("certContainer");
+      container.innerHTML = "";
+
+      if (certificates.length === 0) {
+        container.innerHTML = `<p class="col-span-full text-center text-slate-500 py-10">Tiada sijil ditemui. Sila klik 'Tambah Sijil' di atas.</p>`;
+        return;
+      }
+
+      certificates.forEach((cert) => {
+        const card = document.createElement("div");
+        card.className = "bg-slate-800/60 border border-slate-700/60 rounded-xl overflow-hidden shadow-lg transition duration-300 hover:border-blue-500/50 flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <div class="h-48 overflow-hidden bg-slate-950">
+              <img src="${cert.image}" alt="${cert.title}" class="w-full h-full object-cover transition duration-500 hover:scale-105" onerror="this.src='https://via.placeholder.com/600x400?text=Sijil+Gambar'">
+            </div>
+            <div class="p-5">
+              <span class="text-xs font-semibold text-blue-400 bg-blue-950/60 px-2.5 py-1 rounded-md border border-blue-800/40">${cert.date}</span>
+              <h4 class="text-lg font-bold text-slate-100 mt-3 line-clamp-1">${cert.title}</h4>
+              <p class="text-slate-400 text-sm mt-1">${cert.issuer}</p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-2 border-t border-slate-700/40 flex justify-end">
+            <button onclick="deleteCertificate(${cert.id})" class="text-red-400 hover:text-red-300 text-sm flex items-center gap-1 transition">
+              <i data-lucide="trash-2" class="w-4 h-4"></i> Padam
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // Modal Controller
+    function toggleModal(show) {
+      const modal = document.getElementById("certModal");
+      if (show) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      } else {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.getElementById("certForm").reset();
+        tempBase64Image = "";
+      }
+    }
+
+    // Tukar muatan gambar tempatan ke format Base64
+    function convertImageToBase64() {
+      const fileInput = document.getElementById("certImageFile");
+      const file = fileInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          tempBase64Image = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Simpan Sijil Baru
+    function saveCertificate(event) {
+      event.preventDefault();
+
+      const title = document.getElementById("certTitle").value;
+      const issuer = document.getElementById("certIssuer").value;
+      const date = document.getElementById("certDate").value;
+      const urlInput = document.getElementById("certImageUrl").value;
+
+      // Utamakan gambar dari peranti, jika tiada gunakan URL
+      const finalImage = tempBase64Image || urlInput || "https://images.unsplash.com/photo-1589330694653-ded6df03f754?w=600&auto=format&fit=crop&q=80";
+
+      const newCert = {
+        id: Date.now(),
+        title,
+        issuer,
+        date,
+        image: finalImage
+      };
+
+      certificates.unshift(newCert);
+      localStorage.setItem("my_certificates", JSON.stringify(certificates));
+      
+      renderCertificates();
+      toggleModal(false);
+    }
+
+    // Padam Sijil
+    function deleteCertificate(id) {
+      if (confirm("Adakah anda pasti mahu memadam sijil ini?")) {
+        certificates = certificates.filter(cert => cert.id !== id);
+        localStorage.setItem("my_certificates", JSON.stringify(certificates));
+        renderCertificates();
+      }
+    }
+  </script>
+</body>
+</html>
